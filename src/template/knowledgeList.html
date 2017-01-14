@@ -1,0 +1,43 @@
+<div class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row"  ng-repeat="knowledge in knowledgeList" ng-if="$index % 3 == 0" style="text-align:center">
+  <div class="col-lg-4" ng-if="knowledgeList[$index].id != undefined">
+    <img class="img-circle" ng-src="{{knowledgePrefix}}{{knowledgeList[$index].img}}" alt="{{knowledgeList[$index].keywords}}" style="width: 140px; height: 140px;">
+    <h2>{{knowledgeList[$index].name}}</h2>
+    <p>{{knowledgeList[$index].description | limitTo:100}}</p>
+    <p><!-- <a class="btn btn-default" href="#/navbar/knowledgeDetail/{{knowledgeList[$index].id}}" role="button">查看详情 &raquo;</a> -->
+<a class="btn btn-default" ui-sref="navbar.knowledgeDetail({id:knowledgeList[$index].id})" role="button">查看详情 &raquo;</a>
+    </p>
+  </div><!-- /.col-lg-4 -->
+
+  <div class="col-lg-4" ng-if="knowledgeList[$index+1].id != undefined">
+    <img class="img-circle" ng-src="{{knowledgePrefix}}{{knowledgeList[$index+1].img}}" alt="{{knowledgeList[$index+1].keywords}}" style="width: 140px; height: 140px;">
+    <h2>{{knowledgeList[$index+1].name}}</h2>
+    <p>{{knowledgeList[$index+1].description  | limitTo:100}}</p>
+    <p><a class="btn btn-default" href="#/navbar/knowledgeDetail/{{knowledgeList[$index+1].id}}" role="button">查看详情 &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+
+
+  <div class="col-lg-4"  ng-if="knowledgeList[$index+2].id != undefined">
+    <img class="img-circle" ng-src="{{knowledgePrefix}}{{knowledgeList[$index+2].img}}" alt="{{knowledgeList[$index+2].keywords}}" style="width: 140px; height: 140px;">
+    <h2>{{knowledgeList[$index+2].name}}</h2>
+    <p>{{knowledgeList[$index+2].description  | limitTo:100}}</p>
+    <p><a class="btn btn-default" href="#/navbar/knowledgeDetail/{{knowledgeList[$index+2].id}}" role="button">查看详情 &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+
+  </div><!-- /.row -->
+
+  <nav>
+    <ul class="pagination">
+      <!-- <li ng-repeat="n in [] | range:knowledgeListsPageCount"><a href="#/navbar/knowledgeList/{{knowledgeCateID}}/{{n}}">{{n}}</a></li> -->
+      <li ng-repeat="p in pageLCountist"><a href="#/navbar/knowledgeList/{{knowledgeCateID}}/{{p}}">{{p}}</a></li>
+    </ul>
+  </nav>
+
+  
+
+  <nav>
+
+</div>
+

@@ -1,0 +1,20 @@
+<div class="container marketing" style="padding:100px;">
+
+	<div class="row featurette">
+		<div class="col-md-6">
+	      <img class="featurette-image img-responsive" ng-src="{{knowledgePrefix}}{{detail.img}}" alt="{{detail.keywords}}">
+	    </div>
+	    <div class="col-md-6">
+	      <h2 class="featurette-heading">{{detail.title}}  </h2><br>
+	      <p class="lead">关键词：<span style="font-size:20px">{{detail.keywords}}</span></p>
+	      <p class="lead">详细介绍：<span style="font-size:20px">{{detail.description}}</span></p>
+	      <p class="lead" compile="detail.message"></p>
+
+			<a href="javascript:void(0)"  ng-click="back('knowledgeDetailGoBack')" id="knowledgeDetailGoBack" tabindex="0" 
+			class="btn btn-lg btn-danger" 
+			role="button" data-toggle="popover" data-trigger="focus" title="返回前页" data-content="你在当前页面进行了直接刷新，找不到回去的路了！">返回前页</a>
+
+	    </div>
+	</div>
+
+</div>
