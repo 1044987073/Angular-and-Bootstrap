@@ -112,7 +112,7 @@
     		}).then(function(res){
     			$scope.knowledgeList = res.data.tngou;
     			var pageCountList = [];
-    			var rows = 9;
+    			var rows =20;
     			for(var i=1;i<=Math.ceil(res.data.total/rows); i++){
     				pageCountList.push(i);
     			}
@@ -128,7 +128,6 @@
               id:$stateParams.id
             }
           }).then(function(respones){
-            console.log(respones.data)
             $scope.detail = respones.data;
             $scope.detail.content = $sce.trustAsHtml(respones.data.message);
           })

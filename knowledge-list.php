@@ -7,7 +7,7 @@
 
     @$id = $_GET["id"]?$_GET["id"]:0;
     @$page = $_GET["page"]?$_GET["page"]:1;
-    @$rows = $_GET["rows"]?$_GET["rows"]:9;
+    @$rows = $_GET["rows"]?$_GET["rows"]:20;
 
     $ch = curl_init();
     $url = 'http://apis.baidu.com/tngou/lore/list?id='.$id.'&page='.$page.'&rows=' .$rows;

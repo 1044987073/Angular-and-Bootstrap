@@ -1,31 +1,37 @@
 <div class="container marketing">
 
   <!-- Three columns of text below the carousel -->
-  <div class="row"  ng-repeat="knowledge in knowledgeList" ng-if="$index % 3 == 0" style="text-align:center">
-  <div class="col-lg-4" ng-if="knowledgeList[$index].id != undefined">
+  <div class="row"  ng-repeat="knowledge in knowledgeList" ng-if="$index % 4 == 0" style="text-align:center">
+  <div class="col-lg-3" ng-if="knowledgeList[$index].id != undefined" style="margin-top:40px">
     <img class="img-circle" ng-src="{{knowledgePrefix}}{{knowledgeList[$index].img}}" alt="{{knowledgeList[$index].keywords}}" style="width: 140px; height: 140px;">
-    <h2>{{knowledgeList[$index].name}}</h2>
-    <p>{{knowledgeList[$index].description | limitTo:100}}</p>
+    <h2>{{knowledgeList[$index].keywords | limitTo:6}}</h2>
+    <p>{{knowledgeList[$index].description | limitTo:50}}...</p>
     <p><!-- <a class="btn btn-default" href="#/navbar/knowledgeDetail/{{knowledgeList[$index].id}}" role="button">查看详情 &raquo;</a> -->
 <a class="btn btn-default" ui-sref="navbar.knowledgeDetail({id:knowledgeList[$index].id})" role="button">查看详情 &raquo;</a>
     </p>
   </div><!-- /.col-lg-4 -->
 
-  <div class="col-lg-4" ng-if="knowledgeList[$index+1].id != undefined">
+  <div class="col-lg-3" ng-if="knowledgeList[$index+1].id != undefined" style="margin-top:40px">
     <img class="img-circle" ng-src="{{knowledgePrefix}}{{knowledgeList[$index+1].img}}" alt="{{knowledgeList[$index+1].keywords}}" style="width: 140px; height: 140px;">
-    <h2>{{knowledgeList[$index+1].name}}</h2>
-    <p>{{knowledgeList[$index+1].description  | limitTo:100}}</p>
+    <h2>{{knowledgeList[$index+1].keywords | limitTo:6}}</h2>
+    <p>{{knowledgeList[$index+1].description  | limitTo:50}}...</p>
     <p><a class="btn btn-default" href="#/navbar/knowledgeDetail/{{knowledgeList[$index+1].id}}" role="button">查看详情 &raquo;</a></p>
   </div><!-- /.col-lg-4 -->
 
 
-  <div class="col-lg-4"  ng-if="knowledgeList[$index+2].id != undefined">
+  <div class="col-lg-3"  ng-if="knowledgeList[$index+2].id != undefined" style="margin-top:40px">
     <img class="img-circle" ng-src="{{knowledgePrefix}}{{knowledgeList[$index+2].img}}" alt="{{knowledgeList[$index+2].keywords}}" style="width: 140px; height: 140px;">
-    <h2>{{knowledgeList[$index+2].name}}</h2>
-    <p>{{knowledgeList[$index+2].description  | limitTo:100}}</p>
+    <h2>{{knowledgeList[$index+2].keywords | limitTo:6}}</h2>
+    <p>{{knowledgeList[$index+2].description  | limitTo:50}}...</p>
     <p><a class="btn btn-default" href="#/navbar/knowledgeDetail/{{knowledgeList[$index+2].id}}" role="button">查看详情 &raquo;</a></p>
   </div><!-- /.col-lg-4 -->
-
+  
+  <div class="col-lg-3"  ng-if="knowledgeList[$index+3].id != undefined" style="margin-top:40px">
+    <img class="img-circle" ng-src="{{knowledgePrefix}}{{knowledgeList[$index+3].img}}" alt="{{knowledgeList[$index+3].keywords}}" style="width: 140px; height: 140px;">
+    <h2>{{knowledgeList[$index+3].keywords | limitTo:6}}</h2>
+    <p>{{knowledgeList[$index+3].description  | limitTo:50}}...</p>
+    <p><a class="btn btn-default" href="#/navbar/knowledgeDetail/{{knowledgeList[$index+3].id}}" role="button">查看详情 &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
 
   <nav>
